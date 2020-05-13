@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('appointments','AppointmentController@index')->name('api-appointments');
 Route::get('appointment/{date}','AppointmentController@show_basedOnDate')->name('api-appointments.show_basedOnDate  ');
+
+Route::post('live-appointment','LiveAppointmentController@store')->name('api-live-appointments.create');
+
